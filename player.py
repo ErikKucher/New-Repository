@@ -1,10 +1,15 @@
 import pygame
+from tile import*
 from settings import *
+pygame.init()
 
 class Player(pygame.sprite.Sprite):
 	def __init__(self,pos,groups,collision_sprites,image1):
 		super().__init__(groups)
 		self.image = pygame.image.load(image1).convert()
+		self.images = []
+		self.images.append(pygame.image.load('img_2.png').convert())
+		self.images.append(pygame.image.load('img_3.png').convert())
 
 		#(TILE_SIZE // 2, TILE_SIZE)
 		#self.image.fill(PLAYER_COLOR)
@@ -22,8 +27,11 @@ class Player(pygame.sprite.Sprite):
 		keys = pygame.key.get_pressed()
 
 		if keys[pygame.K_RIGHT]:
+			#image1='img_3.png'
 			self.direction.x = 1
+
 		elif keys[pygame.K_LEFT]:
+			#image1='img.png'
 			self.direction.x = -1
 		else:
 			self.direction.x = 0
@@ -58,14 +66,19 @@ class Player(pygame.sprite.Sprite):
 		self.rect.y += self.direction.y
 
 	def update(self):
+		keys = pygame.key.get_pressed()
 		self.input()
 		self.rect.x += self.direction.x * self.speed
 		self.horizontal_collisions()
 		self.apply_gravity()
 		self.vertical_collisions()
+		if keys[pygame.K_RIGHT]:
+			self.image=self.images[1]
+		elif keys[pygame.K_LEFT]:
+			self.image=self.images[0]
+		#hits = pygame.sprite.spritecollide(self.rect, TileO, False)
 
 
-image1_not_scaled = pygame.image.load('img.png')
-image1 = pygame.transform.scale(image1_not_scaled, (TILE_SIZE, TILE_SIZE))
+
 
 

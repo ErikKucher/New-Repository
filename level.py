@@ -1,6 +1,6 @@
 import pygame
 from settings import *
-from tile import Tile,TileO,TileF,TileS
+from tile import Tile,TileO,TileF,TileS,TileGrass
 from player import Player
 
 class Level:
@@ -22,16 +22,17 @@ class Level:
 				x = col_index * TILE_SIZE
 				y = row_index * TILE_SIZE
 				if col == 'X':
-					Tile((x,y),[self.visible_sprites,self.collision_sprites])
+					Tile((x,y),[self.visible_sprites,self.collision_sprites], 'img_12.png')
 				if col == 'P':
 					self.player = Player((x,y),[self.visible_sprites,self.active_sprites],self.collision_sprites,'img_3.png')
 				if col == 'O':
-					TileO((x, y), [self.visible_sprites, self.collision_sprites])
+					TileO((x, y), [self.collision_sprites, self.visible_sprites], 'img.png')
 				if col == 'F':
-					TileF((x, y), [self.visible_sprites])
+					TileF((x, y), [self.visible_sprites, self.collision_sprites], 'img_15.png')
 				if col == 'S':
-					TileS((x, y), [self.visible_sprites])
-				#if col == 'G':
+					TileS((x, y), [self.visible_sprites], 'img_13.png')
+				if col == 'G':
+					TileGrass((x,y),[self.visible_sprites,self.collision_sprites], 'img_11.png')
 
 	def run(self):
 		# run the entire game (level)
