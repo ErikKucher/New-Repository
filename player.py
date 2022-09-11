@@ -77,6 +77,10 @@ class Player(pygame.sprite.Sprite):
 		elif keys[pygame.K_LEFT]:
 			self.image=self.images[0]
 		#hits = pygame.sprite.spritecollide(self.rect, TileO, False)
+		#elif Player.rect.colliderect(TileO.rect):
+			#pygame.quit()
+			#sys.exit()
+
 
 
 

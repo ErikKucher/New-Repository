@@ -1,14 +1,14 @@
 LEVEL_MAP = [
-'O                                                                                              F ',
-'O                                                                                             FFF  ',
-'O                                                                                            FFFFF                                                                                                O',
-'O                                                                                           FFFFFFF                                                                                               F',
-'O   P                                                               XXX                        S                                                                                                  O',
-'OXXXXXXX                                        XXXXXXXX         XXXGGGX                       S                                                                                                  O',
-'OGGGGGGGX                            XXXXX          GGG    XXX                 XXXXXXXXXXXXXXXXX                                                                                                  F',
-'OGGGGGGGGX                          XGGGGG                   G                   GGGGGGGGGGGG                                                                                                     O',
-'OGGGGGGGGGX            XXXXX       XGGGGG                                          GGGGGGG                                                                                                       O',
-'OGGGGGGGGGG       XXXXXGGGG      XXGGGGG                                            GGGG                                                                                                          F',
+'B                                                                                              F ',
+'B                                                                                             FFF  ',
+'B                                                                                            FFFFF                                                                                                B',
+'B                                                                                           FFFFFFF                                                                                               B',
+'B   P                                                               XXX                        S                                                                                                  B',
+'BXXXXXXX                                        XXXXXXXX         XXXGGGX                       S                                                                                                  B',
+'BGGGGGGGX                            XXXXX          GGG    XXX                 XXXXXXXXXXXXXXXXX                                                                                                  B',
+'BGGGGGGGGX                          XGGGGG                   G                   GGGGGGGGGGGG                                                                                                     B',
+'BGGGGGGGGGX            XXXXX       XGGGGG                                          GGGGGGG                                                                                                        B',
+'BGGGGGGGGGG       XXXXXGGGG      XXGGGGG                                            GGGG                                                                                                          B',
 'OGGGGGGGGGGOOOOOOOGGGGGGGGGOOOOOOGGGGGGGOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO']
 
 TILE_SIZE=40
@@ -21,7 +21,7 @@ TILE_COLOR='#228B22'
 TILE_COLORO='#FF0000'
 TILE_COLORF='#FF0000'
 TILE_COLORS='#8B4513'
-
+TILE_COLORBRDR='#ffffff'
 CAMERA_BORDERS={
     'left':100,
     'right':200,

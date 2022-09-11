@@ -1,6 +1,6 @@
 import pygame
 from settings import *
-from tile import Tile,TileO,TileF,TileS,TileGrass
+from tile import Tile,TileO,TileF,TileS,TileGrass,TileBorder
 from player import Player
 
 class Level:
@@ -33,6 +33,8 @@ class Level:
 					TileS((x, y), [self.visible_sprites], 'img_13.png')
 				if col == 'G':
 					TileGrass((x,y),[self.visible_sprites,self.collision_sprites], 'img_11.png')
+				if col == 'B':
+					TileBorder((x, y), [self.collision_sprites])
 
 	def run(self):
 		# run the entire game (level)

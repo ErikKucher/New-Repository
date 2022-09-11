@@ -4,7 +4,7 @@ from settings import*
 class Tile(pygame.sprite.Sprite):
     def __init__(self,pos,groups,image_block):
         super().__init__(groups)
-        self.image=pygame.image.load(image_block).convert()
+        self.image=pygame.image.load(image_block)
         #self.image.fill(TILE_COLOR)
         self.rect=self.image.get_rect(topleft=pos)
 class TileO(pygame.sprite.Sprite):
@@ -30,5 +30,11 @@ class TileGrass(pygame.sprite.Sprite):
         super().__init__(groups)
         self.image=pygame.image.load(image_grass)
         #self.image.fill(TILE_COLORS)
+        self.rect=self.image.get_rect(topleft=pos)
+class TileBorder(pygame.sprite.Sprite):
+    def __init__(self,pos,groups):
+        super().__init__(groups)
+        self.image=pygame.Surface((40,40))
+        self.image.fill(TILE_COLORBRDR)
         self.rect=self.image.get_rect(topleft=pos)
 
